@@ -504,7 +504,9 @@ p {
         width: 80px;
         height: 80px;
     }
-
     
+    .category__btn{
+        margin-bottom: 4px;
+    }
     
 }
