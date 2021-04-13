@@ -73,6 +73,7 @@ h1 {
   font-weight: var(--weight-bold);
   color: var(--color-black);
   margin: 16px 0px;
+  margin-top: 50px;
 }
 
 h2 {
@@ -111,6 +112,7 @@ p {
 #navbar.navbar--dark{
     background-color: var(--color-pink);
     padding: 8px;
+    z-index: 1;
 }
 
 .navbar__logo{
@@ -142,7 +144,6 @@ p {
 }
 .navbar__toggleBtn{
     position: absolute;
-    top:21px;
     right:32px;
     font-size: 24px;
     color: var(--color-white);
