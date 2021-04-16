@@ -181,6 +181,10 @@ p {
     border: 2px solid var(--color-white);
     border-radius: var(--size-border-radius);
 }
+.home__contact:hover{
+    background-color: var(--color-white);
+    color: var(--color-pink);
+}
 
 /* Section common */
 .section {
@@ -320,6 +324,7 @@ p {
     border-radius: var(--size-border-radius);
     font-size: var(--font-regular);
     padding: 8px 48px;
+    position: relative;
 }
 
 .category__btn.selected,
@@ -330,8 +335,8 @@ p {
 
 .category__btn.selected .category__count,
 .category__btn:hover .category__count{
-    opacity: 1;
-    top: 0px;
+    opacity: 1;   
+    top:0; 
 }
 .category__count{
     background-color: var(--color-orange);
@@ -342,11 +347,10 @@ p {
     height: 24px;
     line-height: 24px;
     display: inline-block;
-    position: relative;
-    top:-20px;
-    left: 4px;
+    position: absolute;
+    right: 16px;
     opacity: 0;
-    transition: all var(--annimation-duration);
+    margin-top: 6px;
 }
 
 .work__projects{
@@ -394,7 +398,8 @@ p {
     background-color: var(--color-black);
     opacity: 0;
     transform: translateY(10px);
-    transition: all var(--annimation-duration) ease-in;
+    ransition: all var(--annimation-duration) ease-in;
+    
 }
 
 .project:hover .project__description{
@@ -511,9 +516,22 @@ p {
 
 
 /* For below 768px screen width */
+
+
 @media screen and (max-width: 768px) {
+    :root{/* Font size */
+        --font-large: 30px;
+        --font-medium: 18px;
+        --font-regular: 16px;
+        --font-small: 14px;
+        --font-micro: 12px;
+    }
+
     .navbar__toggle-Btn{
         display: block;
+        top: 16px;
+        right: 16px;
+        font-size: var(--font-medium);
     }
 
     #navbar{
@@ -538,29 +556,62 @@ p {
         display: block;
     }
 
+    .section{
+        padding: 16px;
+        padding-top: 40px;
+    }
+
     .about__majors{
         flex-direction: column;
+        margin-top: 30px;
+        margin-bottom: 0px;
     }
 
     .major{
-        margin-bottom: 38px;
+        margin-bottom: 30px;
     }
 
     .skillset{
         flex-direction: column;
+    }
+
+    .category__btn{
+        width:100%;
+        margin-bottom: 5px;
     }
     
     .project{
         flex-grow: 1;;
     }
 
+    .testimonial{
+        flex-direction: column;
+        align-items: center;
+    }
     .testimonial__avatar{
-        width: 80px;
-        height: 80px;
+        width: 120px;
+        height: 120px;
+        
+    }
+
+    .testimonial__avatar:nth-child(even),
+    .testimonial__avatar:nth-child(odd)
+    {
+        margin: 0; margin-bottom: 8px;
+    }
+    .testimonial_speech-bubble{
+        order:1;
     }
     
-    .category__btn{
-        margin-bottom: 4px;
+    .arrow-up{
+        font-size: 30px;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        right: 16px;
+        bottom: 16px;
     }
+
+
     
 }
