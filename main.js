@@ -23,10 +23,18 @@ navbarMenu.addEventListener('click', (event) => {
     if (link == null) {
         return;
     }
-
-    console.log(event.target.dataset.link);
+    navbarMenu.classList.remove('open');
     scrollIntoView(link);
+    
 });
+
+// Navar toggle button for small screen
+const navbarToggleBtn = document.querySelector('.navbar__toggle-Btn');
+navbarToggleBtn.addEventListener('click', () => {
+    navbarMenu.classList.toggle('open');
+});
+
+
 
 // Handle click on "contact me" button on home
 const homeContactBtn = document.querySelector('.home__contact');
